@@ -11,9 +11,9 @@
       }
       .remark-code, .remark-inline-code { font-family: 'Arial'; }
 
-      .remark-slide-content h1 { font-size: 2.1em; }
-      .remark-slide-content h2 { font-size: 1.7em; }
-      .remark-slide-content h3 { font-size: 1.4em; }
+      .remark-slide-content h1 { font-size: 1.9em; }
+      .remark-slide-content h2 { font-size: 1.5em; }
+      .remark-slide-content h3 { font-size: 1.3em; }
 
       .inverse {
         background: #272822;
@@ -28,6 +28,9 @@
         color: #d0d0d0;
         line-height: 0.8em;
       }
+
+      .small {font-size: 0.9em;}
+      .tiny {font-size: 0.5em;}
 
     </style>
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
@@ -47,7 +50,7 @@ class: center, middle, inverse
 
 1. История вопроса
 2. Используемые методы
-3. Результаты
+3. Реализация и результаты
 
 ---
 
@@ -58,6 +61,38 @@ class: center, middle, inverse
     Кратко рассказать о том, как производится классификация ДЗЗ на основе
     мультиспектральных данных.
 ---
+## NDVI
+
+.small[Участки усредненной характеристической кривой отражения растительности
+(http://gis-lab.info/qa/ndvi.html):
+]
+
+.center[
+![Участки характеристической кривой отражения растительности](img/Ndvi2.gif
+"Участки усредненной характеристической кривой отражения растительности, используемые для расчета NDVI c помощью данных MODIS")
+]
+
+
+.small[
+`$$
+NDVI = \frac{NIR - RED}{NIR + RED}
+$$`
+где NIR - отражение в ближней инфракрасной области спектра,
+RED - отражение в красной области спектра.
+]
+
+.center[
+.small[
+Тип объекта | Значение NDVI
+------------|--------------
+Густая растительность | 0.7
+Разреженная растительность | 0.5
+Открытая почва | 0.025
+Облака | 0
+]]
+
+---
+
 
 # Возникающие сложности
 
@@ -115,6 +150,37 @@ $$
     Литературы много, мы рассматривает лишь то, что использовалось в нашем случае.
     Осветить основные статьи.
 
+
+---
+# Обзор литературы: Фильтр Савицкого-Голея.
+
+.footnote[.red[*] Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
+    satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
+Адаптивный фильтр Савицкого-Голея:
+
+Есть временной ряд `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. В скользящем окне длиной `\(2m +1\)`
+отсчетов производится аппроксимация многочленом
+степени d (например, параболой: d=2), коэффициенты которого расчитываются
+тем или иным способом (например, методом наименьших квадратов). Для центральной
+точки окна по этому многочлену вычисляется значение, которое и будет результирующим
+значением отфильтрованной кривой в данной точке. Затем окно сдвигается на одну позицию
+и строится новая точка --- прогнозное значение кривой.
+Процедура повторяется до тех пор, пока не закончится исходный ряд.
+`
+$$
+f(t) = c_1 + c_2 t + c_3 t^2
+$$
+`
+
+---
+# Фильтр Савицкого-Голея для NDVI
+
+.footnote[.red[*] Chen J. et al. A simple method for reconstructing a
+high-quality NDVI time-series data set based on the Savitzky–Golay filter //
+Remote sensing of Environment. – 2004. – Т. 91. – №. 3. – С. 332-344.]
+Обработка серий NDVI
+
+
 ---
 
 # Обзор литературы: TIMESAT .red[*]
@@ -122,7 +188,7 @@ $$
 .footnote[.red[*] Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
     satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
 
-1. Полиномы совместно с гармоническими функциями `\(\omega=6\pi/N\)`:
+Полиномы совместно с гармоническими функциями `\(\omega=6\pi/N\)`:
 `
 $$
 \begin{split}
@@ -131,30 +197,23 @@ f(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
 \end{split}
 $$
 `
-2. Ассиметричные гауссовы функции:
-`
-$$
-f(t) = c_1 + c_2 g(t, a_1, \dots, a_5),
-$$
-`
-где
-`
-$$
-g(t, a_1, \dots, a_5) = \begin{cases}
-    \exp\Big[-\big(\frac{t-a_1}{a_2}\big)^{a_3} \Big] & \mbox{если } t > a_1 \\
-    (\exp\Big[-\big(\frac{a_1 - t}{a_4}\big)^{a_5} \Big] & \mbox{если } t < a_1
-\end{cases}
-$$
-`
-3. Адаптивный фильтр Савицкого-Голея:
-В скользящем окне длиной `\(n\)` отсчетов производится аппроксимация полиномиальной функцией:
-`
-$$
-f(t) = c_1 + c_2 t + c_3 t^2
-$$
-`
 
 ???
+
+
+
+---
+
+# Обзор литературы:
+
+.footnote[.red[*] Wardlow B. D., Egbert S. L., Kastens J. H.
+Analysis of time-series MODIS 250 m vegetation index data for crop
+classification in the US Central Great Plains //
+Remote Sensing of Environment. – 2007. – Т. 108. – №. 3. – С. 290-310.]
+
+
+Выбор признаков классификации с использованием расстояния Джеффриса-Мацуситы.
+
 
 ---
 
