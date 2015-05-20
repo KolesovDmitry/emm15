@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2440"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   width="716"
+   height="296"
+   version="1.0"
+   sodipodi:docname="spectr.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata2445">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2443">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3328"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2447" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="777"
+     inkscape:window-width="1152"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="1.1001633"
+     inkscape:cx="263.84534"
+     inkscape:cy="62.047777"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg2440" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 44.679119,217.04124 C 48.16216,216.17048 52.205815,219.80939 53.833276,216.55446 C 55.116271,213.98847 58.074985,217.1929 59.241334,214.8602 C 60.615027,212.11282 64.140465,214.90313 64.915619,211.80251 C 65.73295,208.53319 67.410059,208.09909 68.771993,205.37522 C 69.75923,203.40075 76.443134,205.20414 77.127469,205.37522 C 80.327954,206.17535 79.772129,208.09363 80.983842,210.51706 C 81.720941,211.99125 85.584346,213.7814 86.768402,214.37343 C 88.769023,215.37374 88.251154,217.40118 89.832784,218.98281 C 91.56119,220.71121 91.267505,214.69217 91.267505,214.37343 C 91.267505,211.15978 91.267505,207.94614 91.267505,204.7325 C 91.267505,201.03479 90.624776,199.00677 90.624776,195.73429 C 90.624776,194.40767 90.624776,190.1154 90.624776,187.37882 C 90.624776,184.45823 91.267505,181.91586 91.267505,178.38061 C 91.267505,174.61781 91.229259,172.02981 92.552962,169.38241 C 93.815701,166.85693 93.195691,163.8787 93.195691,161.02693 C 93.195691,157.81329 93.195691,154.59964 93.195691,151.386 C 93.195691,148.04741 93.095815,144.71548 93.83842,141.74506 C 94.775662,137.99609 93.699202,135.87464 94.481149,132.74686 C 95.18183,129.94414 94.481149,126.012 94.481149,123.10592 C 94.481149,119.42047 94.907142,115.61739 95.766607,112.17953 C 96.714817,108.38669 96.95845,104.93486 97.694794,101.25314 C 98.414562,97.654301 99.417992,94.360348 100.26571,90.969479 C 100.91765,88.361714 100.90844,85.3506 100.90844,81.971275 C 100.90844,80.279522 102.34603,76.220896 102.83662,74.258528 C 103.65516,70.984384 104.19009,69.623413 105.40754,67.18851 C 106.56943,64.864733 110.64082,65.487539 112.74379,64.961797 C 115.0816,64.377346 119.72149,64.467187 121.81997,63.942567 C 124.78995,63.200071 128.4929,63.199438 130.81817,62.618121 C 133.10806,62.045648 133.52607,61.444336 136.25853,60.761221 C 139.2216,60.020452 142.19205,63.481102 143.32855,64.617594 C 145.09721,66.386253 149.95181,65.488595 152.02822,67.565012 C 153.99194,69.528726 157.33278,71.317884 158.98797,72.97307 C 161.19187,75.176977 160.11924,76.367333 161.96768,76.829443 C 164.81329,77.540846 166.60618,76.829443 170.32316,76.829443 C 173.52892,76.829443 173.82965,74.653104 177.39318,75.543986 C 179.69125,76.118502 182.51013,78.6581 183.17774,81.328546 C 183.55736,82.847026 186.50745,85.417061 187.67684,87.755835 C 188.91742,90.237003 189.09532,93.80644 190.24776,96.11131 C 191.71613,99.048061 191.59593,102.0213 192.81867,104.46679 C 194.03426,106.89795 193.35943,111.12894 194.10413,114.10772 C 194.91206,117.33946 195.97681,119.78127 197.31777,122.4632 C 198.43328,124.6942 199.34945,127.37626 199.88869,129.53321 C 200.71747,132.84833 201.17415,135.64895 201.17415,139.17415 C 201.17415,141.58225 203.10233,144.06091 203.10233,147.52962 C 203.10233,150.94158 203.11498,154.02017 203.74506,157.17056 C 204.3323,160.10676 205.01089,162.23386 205.67325,164.8833 C 206.31995,167.47012 207.83709,172.75674 212.74327,172.75674 C 215.13718,172.75674 214.47818,165.33501 214.99282,163.27648 C 215.72149,160.36177 217.22257,157.24974 217.8851,154.59964 C 218.63439,151.60248 221.09875,149.59213 221.09875,146.24417 C 221.09875,142.92139 224.21892,140.19075 224.95512,137.24596 C 225.84181,133.69918 227.38919,133.02055 228.81149,130.17594 C 230.21997,127.35898 229.05631,125.43202 231.06104,123.42729 C 232.85097,121.63736 233.01782,119.07457 234.91741,118.12477 C 236.16281,117.50208 237.5376,115.62188 238.45242,115.39318 C 241.55707,114.61702 244.2446,114.75426 246.8079,116.03591 C 249.63226,117.44808 255.16007,118.27226 255.8061,120.85638 C 256.24474,122.61094 260.34521,124.57207 261.59066,124.71275 C 264.43655,125.0342 264.92227,127.08026 266.89317,129.05116 C 268.75193,130.90992 269.29365,132.09925 271.87432,133.38959 C 273.85671,134.38078 273.10327,137.98397 273.80252,140.78097 C 274.44331,143.34414 273.76859,146.10845 274.44524,148.81508 C 275.36647,152.49999 276.37343,153.98572 276.37343,157.81329 C 276.37343,161.15187 276.47331,164.4838 275.7307,167.45422 C 275.326,169.07303 276.55974,174.62673 277.01616,176.45242 C 277.71684,179.25515 277.01616,183.18728 277.01616,186.09336 C 277.01616,188.57371 277.78365,192.50173 278.30162,195.09156 C 278.9368,198.2675 279.21939,201.42621 280.2298,203.44704 C 281.39361,205.77466 283.2372,207.09716 284.7289,208.58887 C 286.4054,210.26536 288.76688,212.21468 289.22801,212.44524 C 293.08881,214.37564 289.8738,218.54964 294.36984,216.30162 C 296.58914,215.19197 298.28663,213.02755 299.51167,211.80251 C 301.00416,210.31002 302.09457,205.3273 302.72531,202.80431 C 303.37965,200.18695 305.03655,197.66679 306.58169,195.09156 C 308.73828,191.49724 310.21063,188.59013 311.72352,184.8079 C 312.78371,182.15741 314.7034,179.2571 316.86535,177.09515 C 318.49139,175.46911 322.1681,174.36332 324.5781,171.95332 C 326.73553,169.79589 329.33775,168.47912 331.00539,166.81149 C 332.68844,165.12844 334.27763,164.21128 336.78995,162.95512 C 339.02644,161.83687 342.01729,167.62525 342.57451,168.73968 C 344.06101,171.71267 344.31865,174.43079 345.14542,177.73788 C 345.9513,180.96138 348.77437,183.29501 350.92998,185.45063 C 353.35711,187.87775 354.89084,190.08905 356.71454,192.52065 C 358.77907,195.27335 359.34173,197.77503 360.57092,200.23339"
+       id="path3232"
+       sodipodi:nodetypes="csssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssc"
+       inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 43.062837,230.44165 C 43.114149,230.54428 49.722507,225.88445 52.061041,225.29982 C 54.608542,224.66295 57.600758,222.33102 59.131059,220.80072 C 60.799349,219.13243 62.818925,217.28136 63.630162,215.65889 C 65.09138,212.73645 67.208585,211.43773 68.771993,209.87433 C 70.843595,207.80272 72.598518,204.76234 74.556553,202.80431 C 77.495413,199.86545 77.780788,198.29462 80.341113,195.73429 C 83.073916,193.00149 85.596386,190.01272 86.125673,189.307 C 87.769489,187.11525 91.131644,186.22922 92.552962,184.8079 C 93.91739,183.44347 95.255157,178.49822 95.766607,176.45242 C 96.399686,173.92011 97.786836,171.58515 98.337522,169.38241 C 99.138892,166.17693 102.19597,162.95304 103.47935,161.66966 C 106.48374,158.66527 109.49128,155.65773 111.83483,153.31418 C 113.98504,151.16397 114.43123,149.44507 116.97666,148.17235 C 120.12804,146.59666 121.77081,145.30639 124.04668,143.03052 C 126.26491,140.81229 128.90924,139.95651 131.75943,138.53142 C 134.7034,137.05943 137.23645,135.47154 140.1149,134.03232 C 142.49307,132.84323 146.50254,133.54036 148.47038,134.03232 C 151.47466,134.78339 153.58892,135.31312 156.82585,135.9605 C 160.4979,136.69491 163.02948,135.4296 165.82406,134.03232 C 167.9851,132.95179 170.38668,129.46969 171.60862,128.24776 C 173.94297,125.9134 171.63848,123.74865 176.75045,123.74865 C 181.16492,123.74865 181.42695,122.75112 182.53501,120.53501 C 183.69465,118.21572 185.96084,117.32136 188.9623,117.32136 C 192.28491,117.32136 194.26622,118.80803 196.03232,119.24955 C 199.31319,120.06977 201.4136,120.63583 204.38779,119.89228 C 207.30566,119.16281 209.21932,118.60682 212.74327,118.60682 C 215.12913,118.60682 219.32517,117.92544 221.74147,117.32136 C 224.69182,116.58378 226.94792,115.53771 230.09695,114.75045 C 233.28372,113.95376 236.3242,113.56501 239.09515,112.17953 C 241.27012,111.09205 245.51693,111.5368 248.09336,111.5368 C 250.57291,111.5368 254.02722,110.85675 256.44883,110.25135 C 259.40228,109.51299 261.45406,110.89408 264.80431,110.89408 C 268.01795,110.89408 271.2316,110.89408 274.44524,110.89408 C 276.84055,110.89408 275.96515,115.62762 277.65889,117.32136 C 278.06548,117.72796 285.47628,116.54412 286.01436,116.67864 C 289.39866,117.52471 291.02596,116.67864 294.36984,116.67864 C 296.71436,116.67864 300.10173,114.76362 302.72531,114.10772 C 303.85443,113.82544 307.33225,110.84016 308.50987,110.25135 C 311.6633,108.67463 314.92435,111.5304 316.22262,112.17953 C 318.44079,113.28862 321.99059,116.66204 323.29264,117.96409 C 325.08669,119.75815 330.98847,118.45037 332.93357,117.96409 C 335.81011,117.24496 338.20136,117.96409 341.28905,117.96409 C 343.83353,117.96409 346.9553,118.60682 350.28725,118.60682"
+       id="path3234"
+       inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="M 142.70608,247.37086 C 141.45775,246.92982 138.09348,245.53599 136.34339,245.09847 C 134.89895,244.73736 133.15567,242.59565 131.79861,241.91712 C 130.07491,241.05527 128.49328,240.52269 126.79935,240.09921 C 124.66874,239.56656 124.0787,238.73578 121.34562,238.73578 C 119.60993,238.73578 116.89736,238.19181 115.4374,237.82682 C 113.37576,237.31141 112.13622,236.54705 109.98367,236.00891 C 108.14049,235.54811 106.98785,233.92205 105.89337,232.82756 C 104.14102,231.07522 102.97562,230.00526 101.34859,229.19174 C 99.508268,228.27158 97.992273,227.8283 95.440373,227.8283 C 92.722053,227.8283 91.736918,226.91935 89.077682,226.91935 C 86.942452,226.91935 85.562454,225.22203 84.532902,224.19248 C 82.870053,222.52963 82.369363,221.22884 81.351556,219.19322 C 80.52179,217.53369 77.699803,217.92387 75.897821,218.28427 C 73.846884,218.69445 71.451333,218.73875 69.989607,218.73875 C 68.53565,218.73875 66.69043,220.38833 65.444827,221.01114 C 63.470433,221.99833 63.17371,223.05597 60.44557,223.738 C 58.468598,224.23225 56.402283,225.2033 54.991834,225.55592 C 52.755832,226.11492 51.324356,226.04205 49.992576,227.37383 C 48.509822,228.85658 47.415639,228.4374 46.356753,230.55517 C 46.225699,230.81728 44.827598,231.79557 44.538841,232.37308"
+     id="path3236"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3238"
+     width="360.8555"
+     height="209.05986"
+     x="31.813457"
+     y="39.674427"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <rect
+     style="fill:#000000;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1;opacity:0.11347518"
+     id="rect3240"
+     width="15.45225"
+     height="208.15091"
+     x="82.714989"
+     y="39.674427"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <rect
+     style="fill:#000000;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.07092199000000000;fill-opacity:1"
+     id="rect3242"
+     width="19.088074"
+     height="209.05986"
+     x="108.16576"
+     y="39.674427"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="M 448.11528,42.401294 L 448.11528,248.73429 L 709.89458,249.64325"
+     id="path3246"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="281.96585"
+     y="240.36862"
+     id="text3268"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3270"
+       x="281.96585"
+       y="240.36862"
+       style="font-size:14px">Длина волны</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="-154.12343"
+     y="51.042313"
+     id="text3280"
+     transform="matrix(0,-1,1,0,0,0)"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3282"
+       x="-154.12343"
+       y="51.042313">Отражение %</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="-173.09753"
+     y="468.81247"
+     id="text3284"
+     transform="matrix(0,-1,1,0,0,0)"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3286"
+       x="-173.09753"
+       y="468.81247">Отражение %</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="585.57886"
+     y="241.92581"
+     id="text3288"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3290"
+       x="585.57886"
+       y="241.92581">Отражение %</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="82.350815"
+     y="36.040085"
+     id="text3292"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3294"
+       x="82.350815"
+       y="36.040085">b1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="110.70905"
+     y="36.404266"
+     id="text3296"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3298"
+       x="110.70905"
+       y="36.404266">b2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="423.42551"
+     y="53.987679"
+     id="text3300"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3302"
+       x="423.42551"
+       y="53.987679">b1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="691.06403"
+     y="269.77737"
+     id="text3304"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3306"
+       x="691.06403"
+       y="269.77737">b2</tspan></text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+     d="M 92.16427,36.765471 L 91.25532,12.22366 L 405.75407,10.405748 L 418.47945,35.856515"
+     id="path3318"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+     d="M 116.34636,250.73429 L 117.25532,270.73132 L 634.45124,269.82237 L 662.62888,252.5522"
+     id="path3320"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="119.07323"
+     y="224.19247"
+     id="text4615"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       x="119.07323"
+       y="224.19247"
+       id="tspan4619">вода</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="310.86295"
+     y="86.031174"
+     id="text4623"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan4625"
+       x="310.86295"
+       y="86.031174">сухая</tspan><tspan
+       sodipodi:role="line"
+       x="310.86295"
+       y="103.53117"
+       id="tspan4627">почва</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="119.98219"
+     y="78.759529"
+     id="text4629"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan4631"
+       x="119.98219"
+       y="78.759529">растительность</tspan></text>
+  <path
+     style="opacity:0.07092201;fill:#00ff00;fill-opacity:1;stroke:#00ff00;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path4635"
+     d="M 562.29083,94.528867 C 562.22362,96.079436 562.23381,97.632021 562.23537,99.183635 L 550.32669,105.25141 C 550.32823,103.71865 550.33936,102.18483 550.27124,100.65316 L 562.29083,94.528867 z"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     sodipodi:type="arc"
+     style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:#00ff00;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path4639"
+     sodipodi:cx="500.38025"
+     sodipodi:cy="81.94088"
+     sodipodi:rx="27.723156"
+     sodipodi:ry="24.996288"
+     d="M 528.1034,81.94088 A 27.723156,24.996288 0 1 1 472.65709,81.94088 A 27.723156,24.996288 0 1 1 528.1034,81.94088 z"
+     transform="translate(173.61058,120.89114)"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     sodipodi:type="arc"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path4641"
+     sodipodi:cx="494.47202"
+     sodipodi:cy="224.19247"
+     sodipodi:rx="20.905987"
+     sodipodi:ry="16.361206"
+     d="M 515.378,224.19247 A 20.905987,16.361206 0 1 1 473.56603,224.19247 A 20.905987,16.361206 0 1 1 515.378,224.19247 z"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     sodipodi:type="arc"
+     style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path4643"
+     sodipodi:cx="559.4624"
+     sodipodi:cy="146.93123"
+     sodipodi:rx="27.723156"
+     sodipodi:ry="20.905987"
+     d="M 587.18556,146.93123 A 27.723156,20.905987 0 1 1 531.73925,146.93123 A 27.723156,20.905987 0 1 1 587.18556,146.93123 z"
+     inkscape:export-filename="/home/dima/laboro/artikoloj/ДЗЗ/fires/seminar_2010/img/spectr.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+</svg>
