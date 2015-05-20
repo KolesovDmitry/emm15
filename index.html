@@ -176,12 +176,22 @@ Remote Sensing of Environment. – 2007. – Т. 108. – №. 3. – С. 290-31
 
 
 ---
-# Фильтр Савицкого-Голея для NDVI
+## Фильтр Савицкого-Голея для NDVI
 
 .footnote[Chen J. et al. A simple method for reconstructing a
 high-quality NDVI time-series data set based on the Savitzky–Golay filter //
 Remote sensing of Environment. – 2004. – Т. 91. – №. 3. – С. 332-344.]
-Обработка серий NDVI
+
+Авторы предлагают алгоритм, учитывающий то, что шумы в рядах NDVI обычно вызываются
+атмосферными явлениями и занижают значения NDVI.
+
+.small[.center[Кривая NDVI для точки сосново-кустарничково-сфагнового олиготрофного болота (3 года).]]
+.center[
+![Восстановление кривой NDVI](img/sg_filter.png
+"Восстановление кривой NDVI")
+]
+
+
 
 
 ---
@@ -215,7 +225,7 @@ $$
 .footnote[Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
     satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
 
-Полиномы совместно с гармоническими функциями `\(\omega=6\pi/N\)`:
+Методом наименьших квадратов подгоняются полинномы совместно с гармоническими функциями (`\(\omega=6\pi/N\)`):
 `
 $$
 \begin{split}
@@ -232,29 +242,70 @@ available Landsat data: Predicting Landsat surface reflectance at any given time
 
 `
 $$
-f_{simple}(t) = c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t)
+f_{simple}(t) = c_1 + c_2 \sin(\omega t) + c_3 \cos(\omega t)
 $$
 `
 
 `
 $$
 \begin{split}
-f_{advansed}(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
-       & c_6 \sin(2\omega t) + c_7 \cos(2\omega t)
+f_{advansed}(t) = & c_1 + c_2 \sin(\omega t) + c_3 \cos(\omega t) + \\
+       & c_4 \sin(2\omega t) + c_5 \cos(2\omega t)
 \end{split}
 $$
 `
+
 `
 $$
 \begin{split}
-f_{full}(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
-       & c_6 \sin(2\omega t) + c_7 \cos(2\omega t) + c_8 \sin(3\omega t) + c_9 \cos(3\omega t)
+f_{full}(t) = & c_1 + c_2 \sin(\omega t) + c_3 \cos(\omega t) + \\
+       & c_4 \sin(2\omega t) + c_5 \cos(2\omega t) + c_6 \sin(3\omega t) + c_7 \cos(3\omega t)
 \end{split}
 $$
 `
 
 
 ???
+
+
+---
+# Классификация на базе преобразования Фурье
+
+.footnote[
+Lhermitte S. et al. Hierarchical image segmentation based on similarity of NDVI time series
+//Remote Sensing of Environment. – 2008. – Т. 112. – №. 2. – С. 506-521.
+]
+
+
+Дана функция `\(f(x)\)`, определенная на интервале `\(x\in (-\pi, pi]\)`. Известно, что
+ее можно разложить в ряд, состоящий из тригонометрических функций
+(ограничения на `\(f(x)\)` очень слабые, на практике любая функция будет им удовлетворять):
+`
+$$
+f(x) = \frac{a_0}2 + \sum_{n=0}^\infty (a_n\cos nx + b_n \sin nx)
+$$
+`
+Легко показать, что коэффициенты ряда могут быть вычисленны по формулам:
+`
+$$
+a_n = \frac1{\pi} \int_{-\pi}^\pi f(x) \cos nx dx, \qquad n \ge 0
+$$
+`
+
+`
+$$
+b_n = \frac1{\pi} \int_{-\pi}^\pi f(x) \sin nx dx, \qquad n>0
+$$
+`
+
+Исходный интервал `\(x\in (-\pi, \pi]\)` может быть легко промасштабирован на произвольный симметричный отрезок `\([-L, L]\)`.
+
+???
+  По сути дела мы получаем почти такую же формулу, что и на предыдущих слайдах,
+  за исключением линейного тренда.
+
+  Но тут появляется новая идея -- использовать коэффициенты разложения как признаки
+  для классификации.
 
 
 
@@ -278,13 +329,15 @@ $$
 # Выводы
 
 Ландсат:
- - куча артефактов, связанных с неоднородностью атмосферы
- + детальность;
+ * куча артефактов, связанных с неоднородностью атмосферы
+ * детальность;
 
 Модис:
- + охват (можно покрыть территорию региона без особых затрат)
- + после операции восстановления нет артефактов, связанных с неоднородностью
- - теряется детальность;
+ * охват (можно покрыть территорию региона без особых затрат)
+ * после операции восстановления нет артефактов, связанных с неоднородностью
+ * теряется детальность;
+
+
 
     </textarea>
     <script src="remark-latest.min.js" type="text/javascript">
