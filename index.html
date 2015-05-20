@@ -32,6 +32,8 @@
       .small {font-size: 0.9em;}
       .tiny {font-size: 0.5em;}
 
+      .footnote {font-size: 0.8em; color: #7070aa;}
+
     </style>
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
   </head>
@@ -63,9 +65,8 @@ class: center, middle, inverse
 ---
 ## NDVI
 
-.small[Участки усредненной характеристической кривой отражения растительности
-(http://gis-lab.info/qa/ndvi.html):
-]
+.small[Участки усредненной характеристической кривой отражения растительности]
+.footnote[(http://gis-lab.info/qa/ndvi.html):]
 
 .center[
 ![Участки характеристической кривой отражения растительности](img/Ndvi2.gif
@@ -81,7 +82,6 @@ $$`
 RED - отражение в красной области спектра.
 ]
 
-.center[
 .small[
 Тип объекта | Значение NDVI
 ------------|--------------
@@ -89,7 +89,7 @@ RED - отражение в красной области спектра.
 Разреженная растительность | 0.5
 Открытая почва | 0.025
 Облака | 0
-]]
+]
 
 ---
 
@@ -130,6 +130,61 @@ RED - отражение в красной области спектра.
 
 
 ---
+
+# Извлечение признаков
+
+Классические алгоритмы извлечения или синтеза признаков:
+
+ * Метод главных компонент;
+ * Карты Кохонена;
+
+### Пример исследования:
+
+.footnote[Wardlow B. D., Egbert S. L., Kastens J. H.
+Analysis of time-series MODIS 250 m vegetation index data for crop
+classification in the US Central Great Plains //
+Remote Sensing of Environment. – 2007. – Т. 108. – №. 3. – С. 290-310.]
+
+
+Производится выбор дат съемки для последующей классификации. Оценка качества
+классификации строится на базе расстояния Джеффриса-Мацуситы.
+
+
+
+
+---
+# Очистка от шумов фильтром Савицкого-Голея.
+
+.footnote[Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
+    satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
+
+.small[
+Есть временной ряд `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. В скользящем окне длиной `\(2m +1\)`
+отсчетов производится аппроксимация многочленом
+степени d, коэффициенты которого расчитываются методом наименьших квадратов. Для центральной
+точки окна по этому многочлену вычисляется значение, которое и будет результирующим
+значением отфильтрованной кривой в данной точке. Затем окно сдвигается на одну позицию
+и строится новая точка --- прогнозное значение кривой.
+Процедура повторяется до тех пор, пока не закончится исходный ряд.
+]
+
+.center[
+![Пример нескольких итераций работы фильтра](img/sav_gol.png
+"Пример нескольких итераций работы фильтра")
+]
+
+
+
+---
+# Фильтр Савицкого-Голея для NDVI
+
+.footnote[Chen J. et al. A simple method for reconstructing a
+high-quality NDVI time-series data set based on the Savitzky–Golay filter //
+Remote sensing of Environment. – 2004. – Т. 91. – №. 3. – С. 332-344.]
+Обработка серий NDVI
+
+
+---
 # Обозначения
 
 Очень часто используется подгонка кривых методом наименьших квадратов.
@@ -151,41 +206,13 @@ $$
     Осветить основные статьи.
 
 
----
-# Обзор литературы: Фильтр Савицкого-Голея.
-
-.footnote[.red[*] Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
-    satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
-Адаптивный фильтр Савицкого-Голея:
-
-Есть временной ряд `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. В скользящем окне длиной `\(2m +1\)`
-отсчетов производится аппроксимация многочленом
-степени d (например, параболой: d=2), коэффициенты которого расчитываются
-тем или иным способом (например, методом наименьших квадратов). Для центральной
-точки окна по этому многочлену вычисляется значение, которое и будет результирующим
-значением отфильтрованной кривой в данной точке. Затем окно сдвигается на одну позицию
-и строится новая точка --- прогнозное значение кривой.
-Процедура повторяется до тех пор, пока не закончится исходный ряд.
-`
-$$
-f(t) = c_1 + c_2 t + c_3 t^2
-$$
-`
-
----
-# Фильтр Савицкого-Голея для NDVI
-
-.footnote[.red[*] Chen J. et al. A simple method for reconstructing a
-high-quality NDVI time-series data set based on the Savitzky–Golay filter //
-Remote sensing of Environment. – 2004. – Т. 91. – №. 3. – С. 332-344.]
-Обработка серий NDVI
 
 
 ---
 
-# Обзор литературы: TIMESAT .red[*]
+# TIMESAT
 
-.footnote[.red[*] Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
+.footnote[Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
     satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
 
 Полиномы совместно с гармоническими функциями `\(\omega=6\pi/N\)`:
@@ -198,21 +225,37 @@ f(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
 $$
 `
 
+# Синтезирование изображений Landsat
+.footnote[Zhu Z. et al. Generating synthetic Landsat images based on all
+available Landsat data: Predicting Landsat surface reflectance at any given time
+//Remote Sensing of Environment. – 2015. – Т. 162. – С. 67-83.]
+
+`
+$$
+f_{simple}(t) = c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t)
+$$
+`
+
+`
+$$
+\begin{split}
+f_{advansed}(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
+       & c_6 \sin(2\omega t) + c_7 \cos(2\omega t)
+\end{split}
+$$
+`
+`
+$$
+\begin{split}
+f_{full}(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
+       & c_6 \sin(2\omega t) + c_7 \cos(2\omega t) + c_8 \sin(3\omega t) + c_9 \cos(3\omega t)
+\end{split}
+$$
+`
+
+
 ???
 
-
-
----
-
-# Обзор литературы:
-
-.footnote[.red[*] Wardlow B. D., Egbert S. L., Kastens J. H.
-Analysis of time-series MODIS 250 m vegetation index data for crop
-classification in the US Central Great Plains //
-Remote Sensing of Environment. – 2007. – Т. 108. – №. 3. – С. 290-310.]
-
-
-Выбор признаков классификации с использованием расстояния Джеффриса-Мацуситы.
 
 
 ---
@@ -234,8 +277,14 @@ Remote Sensing of Environment. – 2007. – Т. 108. – №. 3. – С. 290-31
 
 # Выводы
 
+Ландсат:
+ - куча артефактов, связанных с неоднородностью атмосферы
+ + детальность;
 
-
+Модис:
+ + охват (можно покрыть территорию региона без особых затрат)
+ + после операции восстановления нет артефактов, связанных с неоднородностью
+ - теряется детальность;
 
     </textarea>
     <script src="remark-latest.min.js" type="text/javascript">
