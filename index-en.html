@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Выделение типов растительного покрова</title>
+    <title>Identification of types of vegetation cover</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       body { font-family: 'Arial'; }
@@ -58,33 +58,30 @@
 
 class: center, middle
 
-# Выделение типов растительного покрова по восстановленной кривой сезонных изменений NDVI
-## (на основе данных MODIS)
-### Колесов Д.А., Филиппов И.В.
+# Identification of types of vegetation cover using recontructed MODIS NDVI phenologies
+### Dmitry Kolesov, Ilya Filippov
 
 ---
 
-# Содержание
+# Contents
 
-### 1. История вопроса
-### 2. Используемые методы
-### 3. Реализация и результаты
-### 4. Технические подробности
+### 1. Overview
+### 2. Methods
+### 3. Implementation and results
+### 4. Technical details
 
 
 ---
-# Цель
-Повысить качество выделения <<трудных>> типов растительного покрова за счет
-привлечения временных серий снимков.
+# Goal
+To increase the quality of identification of <<difficult>> types of vegetation using time series of remote sensing data.
 
-# Задачи
- * Восстановление сезонного хода индекса NDVI (очистка от шумов).
- * Произвести классификацию типов растительного покрова по очищенным сериям NDVI.
- * Проверить точность классификации на <<трудных>> типах растительности.
+# Objectives
+ * To reconstruct seasonal change of NDVI (noise removal).
+ * To classify vegetation types using cleaned-up NDVI series.
+ * Assess the accuracy of the classification of <<difficult>> vegetation types.
 
-# Рабочая гипотеза
-Разные типы растительных сообществ имеют свои фенологические особенности, которые
-отражаются в форме кривой сезонных изменений NDVI.
+# Hypothesis
+Different types of vegetation have different phenologies that are reflected by NDVI curves.
 
 
 ???
@@ -103,18 +100,17 @@ class: center, middle
 
 ---
 
-## Классический подход к выделению типов растительного покрова по ДДЗЗ
+## Classic approach to identify vegetation types using RS data
 
 .center[
-![Спектральные кривые и пространство признаков](img/spectr.png
-"Спектральные кривые и пространство признаков")
+![Spectral curves and feature space](img/spectr.png
+"Spectral curves and feature space")
 ]
 
-.center[Усредненные характеристические кривой отражательной способности
-для различных объектов.]
+.center[Averaged characteristic curves for different objects.]
 
 .small[
-* Различные объекты в разных лучах спектра выглядят по-разному, поэтому
+* Different objects look different in different spectraand Различные объекты в разных лучах спектра выглядят по-разному, поэтому
 съемка одновременно в нескольких областях спектра дает существенную информацию.
 * Каждый пиксель, соответствующий координатам `\((x,y)\)` можно представить
 в виде вектора значений яркости каждого отдельного изображения:
