@@ -110,17 +110,15 @@ Different types of vegetation have different phenologies that are reflected by N
 .center[Averaged characteristic curves for different objects.]
 
 .small[
-* Different objects look different in different spectraand Различные объекты в разных лучах спектра выглядят по-разному, поэтому
-съемка одновременно в нескольких областях спектра дает существенную информацию.
-* Каждый пиксель, соответствующий координатам `\((x,y)\)` можно представить
-в виде вектора значений яркости каждого отдельного изображения:
+* Different objects look different in different spectral bands and imaging in several bands can give more information.
+* Each pixel with coords `\((x,y)\)` can be represented by a vector is brightness of each separate image:
 `$$
   \overline{P}(x,y) =
     \{b_1(x,y), b_2(x,y),
      \dots, b_n(x,y) \}
 $$`
-где `\(\overline{P}\)` - вектор яркостей,
-`\(b_i(x,y)\)` - значение яркости по `\(i\)`-му каналу в точке с координатами `\((x,y)\)`.
+где `\(\overline{P}\)` - brightness vector,
+`\(b_i(x,y)\)` - brightness value in band `\(i\)` at the point with coordinates `\((x,y)\)`.
 ]
 
 ???
@@ -131,20 +129,19 @@ $$`
 ## NDVI
 
 .small[NDVI (Normalized Difference Vegetation Index)
-нормализованный относительный индекс растительности - простой количественный
-показатель количества фотосинтетически активной биомассы.]
+normalized difference vegetation index - simple quantitative measurement of amount of photosynthetically active biomass.]
 
 .left-column[
 
-### Примеры значений
+### Sample values
 
 .small[
-| Тип объекта | Значение NDVI |
+| Type of object | NDVI value |
 |-------------|:--------------:|
-| Густая растительность | 0.7 |
-| Разреженная растительность | 0.5 |
-| Открытая почва | 0.025 |
-| Облака | 0 |
+| Dense vegetation | 0.7 |
+| Sparse vegetation | 0.5 |
+| Bare ground | 0.025 |
+| Clouds | 0 |
 ]
 ]
 
