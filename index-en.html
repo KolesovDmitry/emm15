@@ -147,8 +147,8 @@ normalized difference vegetation index - simple quantitative measurement of amou
 
 .right-column[
 .small[
-Пусть NIR - отражение в ближней инфракрасной области спектра,
-RED - отражение в красной области спектра, тогда:
+NIR - reflectance in near infra-red spectra,
+RED - reflectance in near infra-red spectra:
 `$$
 NDVI = \frac{NIR - RED}{NIR + RED}
 $$`
@@ -156,43 +156,40 @@ $$`
 ]
 
 .center[
-![Участки характеристической кривой отражения растительности](img/Ndvi2.gif
-"Участки усредненной характеристической кривой отражения растительности, используемые для расчета NDVI c помощью данных MODIS")
+![Characteristic parts of the averaged curve of vegetation reflectance](img/Ndvi2.gif
+"Characteristic parts of the averaged vegetation reflectance curve used to calculate NDVI using MODIS data")
 ]
 
-.center[.small[Участки усредненной характеристической кривой отражения растительности]
+.center[.small[Characteristic parts of the averaged curve of vegetation reflectance]
 .footnote[(http://gis-lab.info/qa/ndvi.html)]]
 
 
 ---
-# Плюсы и минусы одномоментных снимков
+# Pros and cons of one-time images
 
-## Плюсы
- * Хорошо изученные методы анализа снимков.
- * Проще интерпретировать данные.
+## Pros
+ * Methods are well-studied.
+ * Easier to interpret data.
 
-## Минусы
- * Каждый одномоментный снимок делается в уникальных условиях (геометрия системы
-Солнце - Земная поверхность - спутник; атмосферные условия; изменения Земной поверхности) =>
-<<хорошие>> параметры анализа для одного снимка будут неоптимальны для другого.
- * Вследствие неоднородности атмосферы одинаковые объекты в разных частях снимка
-могут быть отражены на нем по-разному.
- * Объект виден в статике и разные объекты могут выглядеть одинаково.
+## Cons
+ * Each image is made under unique conditions (geometry of Sun-Earth-Satellite system; atmospheric conditions; changes on the ground) =>
+<<good>> parameters for analysis on one image won't be optimal for another.
+ * As atmosphere is heterogeneous same objects will look different in different parts of an image.
+ * Different objects can look the same.
 
 ???
     О том, что не хорошо в использовании одномоментных снимков.
 ---
 
-# Использование временных серий снимков
+# Using time series
 
-## Плюсы
- * Возможность анализа формы кривой сезонных изменений.
- * Возможность на базе статистических методов отфильтровать шумы, внесенные атмосферными
- и др. условиями.
+## Pros
+ * Posibility to analyze the form of the curve of seasonal changes;
+ * Posibility to filter out noises due to atmosphere and other conditions;
 
-## Минусы
- * Наличие регулярных временных рядов только для снимков с низким пространственным разрешением.
- * Сложность интерпретации данных.
+## Cons
+ * Time series are available only with low resolution;
+ * Complicated interpretation.
 
 
 ???
@@ -204,49 +201,46 @@ $$`
 ---
 
 .center[
-![Сырые кривые NDVI](img/raw_ndvi1.png)
+![Raw NDVI curves](img/raw_ndvi1.png)
 ]
 
-Выборка значений «сырых» рядов NDVI, извлеченных непосредственно
-из MOD13 для: 1 - залесенных березой болот; 2 -  зарастающих березой гарей.
+Sample «raw» NDVI series, extracted from MOD13 for: 1 - bogs forested with birch; 2 -  burns regrown with birch.
 
 ---
 
 .center[
-![Восстановленные кривые NDVI](img/filtered_ndvi1.png)
+![Reconstructed NDVI](img/filtered_ndvi1.png)
 ]
 
-Пример кривых NDVI после удаления высокочастотных компонент для: 1 - залесенных
-березой болот; 2 -  зарастающих березой гарей.
+Sample NDVI series after removing high-frequency components for: 1 - bogs forested with birch; 2 -  burns regrown with birch.
 
 
 ---
-## Разделимость классов по коэффициентам разложения в ряд Фурье
+## Separability of classes by FFT coefficients
 
 .center[
-![Разделимость классов по коэффициентам разложения в ряд Фурье](img/separation.png)
+![Separability of classes by FFT coefficients](img/separation.png)
 ]
-Пример разделимости классов по первым коэффициентам разложения в ряд Фурье для:
-1 - залесенных березой болот; 2 -  зарастающих березой гарей.
+Sample separability by first FFT coefficients for: 1 - bogs forested with birch; 2 -  burns regrown with birch.
 
 ---
-## Пример "одномоментного" многозонального снимка
+## Example of one-time multispectral image
 
 .center[
-![Пример "одномоментного" многозонального снимка](img/01_landsat1.png)
+![Example of one-time multispectral image](img/01_landsat1.png)
 ]
 ---
-## Классификация снимка на 18 классов
+## Image classification into 18 classes
 
 .center[
-![Классификация снимка на 18 классов](img/02_classification1.png)
+![Image classification into 18 classes](img/02_classification1.png)
 ]
 
 
 
 
 ---
-## Классификация одноментного снимка с выделением "трудных классов"
+## Image classification focusing on "difficult classes"
 
 .left-column[
 
@@ -254,13 +248,13 @@ $$`
 .small[
 Cats | Kappa (по классам)
 -----|:---------:
-"Не трудные" классы         | 0.323157
-Залесенные сосной болота    | 0.663677
-Залесенные березой болота   | 0.406724
-Мезотрофные вахтовые болота | 0.801587
-Мезотрофные гипновые топи   | 0.668466
+"Easy" classes              | 0.323157
+Bogs covered with pine      | 0.663677
+Bogs covered with birch     | 0.406724
+Mesotrophic bogs 1          | 0.801587
+Mesotrophic bogs 2          | 0.668466
 
-Kappa (для всей карты)
+Kappa (for the whole image)
 **0.51**
 ]
 ]
@@ -276,22 +270,22 @@ Kappa (для всей карты)
 
 
 ---
-## Классификация по первым 3-м значимым гармоникам
+## Classification by first 3 Fourier coefficients
 
 .left-column[
 
-###Оценка точности классификации
+###Classification accuracy assessment
 
 .small[
-Cats | Kappa (по классам)
+Cats | Kappa (by class)
 -----|:---------:
-"Не трудные" классы         | 0.472705
-Залесенные сосной болота    | 0.373516
-Залесенные березой болота   | 0.791791
-Мезотрофные вахтовые болота | 0.341439
-Мезотрофные гипновые топи   | 0.798712
+"Easy" classes              | 0.472705
+Bogs covered with pine      | 0.373516
+Bogs covered with birch     | 0.791791
+Mesotrophic bogs 1          | 0.341439
+Mesotrophic bogs 2          | 0.798712
 
-Kappa (для всей карты)
+Kappa (for the whole image)
 **0.52**
 ]
 ]
@@ -308,22 +302,22 @@ Kappa (для всей карты)
 
 
 ---
-## Классификация по первым 5-ти значимым гармоникам
+## Classification by first 5 Fourier coefficients
 
 .left-column[
 
-###Оценка точности классификации
+###Classification accuracy assessment
 
 .small[
-Cats | Kappa (по классам)
+Cats | Kappa (by class)
 -----|:---------:
-"Не трудные" классы         | 0.634187
-Залесенные сосной болота    | 0.460223
-Залесенные березой болота   | 0.716393
-Мезотрофные вахтовые болота | 0.571429
-Мезотрофные гипновые топи   | 0.817011
+"Easy" classes              | 0.634187
+Bogs covered with pine      | 0.460223
+Bogs covered with birch     | 0.716393
+Mesotrophic bogs 1          | 0.571429
+Mesotrophic bogs 2          | 0.817011
 
-Kappa (для всей карты)
+Kappa (for the whole image)
 **0.64**
 ]
 ]
@@ -342,21 +336,21 @@ Kappa (для всей карты)
 
 
 ---
-##  5 значимых гармоник с добавлением каналов мультиспектрального снимка
+##  5 meaningful Fourier coefficients plus multispectral bands
 .left-column[
 
-###Оценка точности классификации
+###Classification accuracy assessment
 
 .small[
-Cats | Kappa (по классам)
+Cats | Kappa (by class)
 -----|:---------:
-"Не трудные" классы         | 1.000000
-Залесенные сосной болота    | 0.327354
-Залесенные березой болота   | 0.682927
-Мезотрофные вахтовые болота | 0.761905
-Мезотрофные гипновые топи   | 0.830918
+"Easy" classes              | 1.000000
+Bogs covered with pine      | 0.327354
+Bogs covered with birch     | 0.682927
+Mesotrophic bogs 1          | 0.761905
+Mesotrophic bogs 2          | 0.830918
 
-Kappa (для всей карты)
+Kappa (for the whole image)
 **0.70**
 ]
 ]
@@ -377,18 +371,14 @@ Kappa (для всей карты)
 
 ---
 
-# Обзор методов
+# Methods overview
 
-Два крайних случая обработки мультивременных данных ДЗЗ для дальнейшей
-классификации.
+Two cases for processing of time series RS data for further classification.
 
-1. Восстановление анализируемого изображения (отражающей способности поверхности Земли
- или производных продуктов, например, NDVI) на произвольные даты. Далее классификация
- нескольких снимков за интересующие даты.
-2. Извлечение признаков из снимков и классификация на их основе.
+1. Recovery (modelling) of analyzed image (reflectance or a product, such as NDVI) for any given date and then classification of several such images for particular dates.
+2. Extraction of metrics from the images and classification based on them.
 
-Переходные варианты - методы, позволяющие одновременно и восстанавливать изображения,
-и извлекать признаки для классификации.
+Intermediate options - methods that allow to recover (model) images and extracts metrics at the same time.
 
 
 ???
@@ -401,14 +391,14 @@ Kappa (для всей карты)
 
 ---
 
-# Извлечение признаков
+# Metrics extraction
 
-Классические алгоритмы извлечения или синтеза признаков:
+Classic algorithms for extraction or synthesis of metrics:
 
- * Метод главных компонент;
- * Карты Кохонена;
+ * PCA;
+ * Kohonnen maps;
 
-### Пример исследования:
+### Sample research:
 
 .footnote[Wardlow B. D., Egbert S. L., Kastens J. H.
 Analysis of time-series MODIS 250 m vegetation index data for crop
@@ -416,69 +406,64 @@ classification in the US Central Great Plains //
 Remote Sensing of Environment. – 2007. – Т. 108. – №. 3. – С. 290-310.]
 
 
-Производится выбор дат съемки для последующей классификации. Оценка качества
-классификации строится на базе расстояния Джефриса-Мацуситы.
+Dates for futher classification are selected. Accuracy assessment is done using Jeffrey-Matsusita distance.
 
 
 
 
 ---
-# Очистка от шумов фильтром Савицкого-Голея.
+# Noise removal using Savitsy-Goley filter.
 
 .footnote[Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
     satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
 
 .small[
-Есть временной ряд `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. В скользящем окне длиной `\(2m +1\)`
-отсчетов производится аппроксимация многочленом
-степени d, коэффициенты которого рассчитываются методом наименьших квадратов. Для центральной
-точки окна по этому многочлену вычисляется значение, которое и будет результирующим
-значением отфильтрованной кривой в данной точке. Затем окно сдвигается на одну позицию
-и строится новая точка --- прогнозное значение кривой.
-Процедура повторяется до тех пор, пока не закончится исходный ряд.
+Time series `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. Data in moving window of legth `\(2m +1\)` 
+is approximated using polynomial of dth-degree, coefficients of which are calculated using least squares.
+Using polynomial the value for filtered curve for the window central point is calculated.
+Then the window moves and new point on the modelled curve is calculated.
+And so on/
 ]
 
 .center[
-![Пример нескольких итераций работы фильтра](img/sav_gol.png
-"Пример нескольких итераций работы фильтра")
+![Few sample filter iterations](img/sav_gol.png
+"Few sample filter iterations")
 ]
 
 
 
 ---
-## Фильтр Савицкого-Голея для NDVI
+## Savitsy-Goley filter for NDVI
 
 .footnote[Chen J. et al. A simple method for reconstructing a
 high-quality NDVI time-series data set based on the Savitzky–Golay filter //
 Remote sensing of Environment. – 2004. – Т. 91. – №. 3. – С. 332-344.]
 
-.small[Авторы предлагают алгоритм, учитывающий то, что шумы в рядах NDVI обычно вызываются
-атмосферными явлениями и занижают значения NDVI.]
+.small[Authors suggest an algorithm that takes into account that noises in NDVI series are due to
+atmosphere and typically lower NDVI values.]
 .center[
-![Восстановление кривой NDVI](img/sg_filter.png
-"Восстановление кривой NDVI")
+![NDVI curve reconstruction](img/sg_filter.png
+"NDVI curve reconstruction")
 ]
-.small[.center[Кривая NDVI для точки сосново-кустарничково-сфагнового олиготрофного
-болота (3 года наблюдений).]]
+.small[.center[NDVI curve for the pine covered sphagnum bog (3 years of observations).]]
 
 
 
 ---
-# Подгонка параметрических кривых
+# Fitting parametric curves
 
-Очень часто используется подгонка кривых методом наименьших квадратов.
+Least squares are often used for curve fiting.
 
-Есть временной ряд `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. Кривая моделируется
-в форме:
+Give time series `\((t_i, I_i)\)`, `\(i=1, 2, \dots, N\)`. The curve is modelled as:
 
 `
 $$
 f(t) = c_1 \varphi_1(t) + c_2 \varphi_2(t) + \dots + c_M \varphi_M(t),
 $$
 `
-где `\(\varphi_1(t)\)`, `\(\varphi_2(t)\)`, ..., `\(\varphi_M(t)\)`
-произвольные базисные функции, а `\(c_1\)`, `\(c_2\)`, ..., `\(c_M\)` -
-некоторые коэффициенты.
+where `\(\varphi_1(t)\)`, `\(\varphi_2(t)\)`, ..., `\(\varphi_M(t)\)`
+any basis functions, а `\(c_1\)`, `\(c_2\)`, ..., `\(c_M\)` -
+some coefficients.
 
 ???
     Литературы много, мы рассматривает лишь то, что использовалось в нашем случае.
@@ -494,7 +479,7 @@ $$
 .footnote[Jönsson P., Eklundh L. TIMESAT - a program for analyzing time-series of
     satellite sensor data //Computers & Geosciences. – 2004. – Т. 30.]
 
-Методом наименьших квадратов подгоняются полиномы совместно с гармоническими функциями (`\(\omega=6\pi/N\)`):
+Least squares method is used to fit polynoms together with harmonic functions (`\(\omega=6\pi/N\)`):
 `
 $$
 \begin{split}
@@ -504,7 +489,7 @@ f(t) = & c_1 + c_2 t + c_3 t^2 + c_4 \sin(\omega t) + c_5 \cos(\omega t) + \\
 $$
 `
 
-# Синтезирование изображений Landsat
+# Synthesized Landsat
 .footnote[Zhu Z. et al. Generating synthetic Landsat images based on all
 available Landsat data: Predicting Landsat surface reflectance at any given time
 //Remote Sensing of Environment. – 2015. – Т. 162. – С. 67-83.]
@@ -538,7 +523,7 @@ $$
 
 
 ---
-# Классификация на базе преобразования Фурье
+# Fourier transform classification
 
 .footnote[
 Lhermitte S. et al. Hierarchical image segmentation based on similarity of NDVI time series
@@ -546,15 +531,15 @@ Lhermitte S. et al. Hierarchical image segmentation based on similarity of NDVI 
 ]
 
 
-Дана функция `\(f(x)\)`, определенная на интервале `\(x\in (-\pi, pi]\)`. Известно, что
-ее можно разложить в ряд, состоящий из тригонометрических функций
-(ограничения на `\(f(x)\)` очень слабые, на практике любая функция будет им удовлетворять):
+Function `\(f(x)\)` is given, defined on the interval `\(x\in (-\pi, pi]\)`. It is known that it can be into 
+series of trigonometric functions
+(limitations for `\(f(x)\)` are relaxed, in practice any function will suffice):
 `
 $$
 f(x) = \frac{a_0}2 + \sum_{n=0}^\infty (a_n\cos nx + b_n \sin nx)
 $$
 `
-Легко показать, что коэффициенты ряда могут быть вычислены по формулам:
+It is easy to show and coefficients of the series can be calculated using formulae:
 `
 $$
 a_n = \frac1{\pi} \int_{-\pi}^\pi f(x) \cos nx dx, \qquad n \ge 0
@@ -567,7 +552,7 @@ b_n = \frac1{\pi} \int_{-\pi}^\pi f(x) \sin nx dx, \qquad n>0
 $$
 `
 
-Исходный интервал `\(x\in (-\pi, \pi]\)` может быть легко промасштабирован на произвольный симметричный отрезок `\([-L, L]\)`.
+Initial interval `\(x\in (-\pi, \pi]\)` can be easily scaled on any symmetrical line segment `\([-L, L]\)`.
 
 ???
   По сути дела мы получаем почти такую же формулу, что и на предыдущих слайдах,
@@ -582,17 +567,14 @@ $$
 
 ---
 
-# Выводы
+# Conclusions
 
- * Использование временных серий позволяет повысить точность картирования "трудных" классов.
- * Анализ кривой сезонных изменений позволяет глубже понять специфику объекта исследований.
- * По восстановленной кривой NDVI можно найти период времени, когда интересующие
- объекты наиболее отличаются и подобрать "единомоментный" снимок высокого
- разрешения для анализа классическими методами.
+ * Use of time series can improve classification accuracy of "difficult" classes.
+ * Studying of seasonal change curve gives deeper understand of a target object.
+ * Using reconstructed NDVI series it is possible to find characteristic part where target object are different enough  to then select one-time image of higher resolution to classify using conventional methods.
 
-# Планы на будущее
- * Необходимо научится фильтровать временные серии снимков более высокого
-  пространственного разрешения и низкого временного.
+# Future plans
+ * To learn how to filter time series of images of higher spatial resolution and lower temporal.
 
 
 
